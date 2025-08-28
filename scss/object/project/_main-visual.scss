@@ -1,0 +1,37 @@
+/*----------------------------------------------------------------- */
+/* object/project/_main-visual.scss
+/*----------------------------------------------------------------- */
+@use "../../foundation/foundation";
+
+.p-main-visual{
+    position:relative;
+    width: 100%;
+
+    &__image{
+        display: block; //<img>はインライン要素で「ベースライン」に揃う関係上、下に余計な余白が確保される。blockにして消去する。
+        width: 100%;
+        height: auto;
+    }
+
+    &__heading{
+        position: absolute;
+    }
+
+    .front-page &__heading{
+            top: 52.1%; //文字は中央から少しずれている
+            left: 0;
+            margin-left: 6.7%;
+            transform: translateY(-50%);
+
+            @include foundation.breakpoint(tablet) {
+                font-size: foundation.font-size-rem(36);
+                margin-left: 10.3%;
+            }
+
+            @include foundation.breakpoint(pc) {
+                top: 49.7%;
+                font-size: foundation.font-size-rem(40);
+                margin-left: 5.5%;
+            }
+        }
+}

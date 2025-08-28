@@ -1,0 +1,45 @@
+/*----------------------------------------------------------------- */
+/* foundation/_variables.scss
+/*----------------------------------------------------------------- */
+
+/* font-weight */
+$font-weight-bold: 700;
+$font-weight-regular: 400;
+
+/* color */
+//カラーネーム140色はそちらの名前を採用。そのほかの色には「light」「dark」をつけている。
+$clr-white: #FFFFFF;
+$clr-white-dark: #FFFDFA;
+$clr-white-darker: #EAEAEA;
+$clr-whitesmoke-lighter: #F2EDE9;
+$clr-whitesmoke-light: #DED8D3;
+$clr-whitesmoke: #f5f5f5;
+$clr-orange-light: #FFF7EF;
+$clr-brown-dark:#3C2A10;
+$clr-gray: #808080;
+$clr-gray-light: #707070;
+$clr-gray-lighter: #F2EDE9;
+$clr-black: #000000;
+
+$color-base: $clr-white-dark;
+$color-text: $clr-brown-dark;
+$color-text-sub: $clr-gray-light;
+$color-text-white: $clr-white;
+$color-background-white: $clr-white;
+$color-background-underline: $clr-white;
+$color-background-header: $clr-orange-light;
+$color-background-sidebar: $clr-gray-lighter;
+$color-gradation-light:$clr-whitesmoke-lighter;
+$color-gradation-dark: $clr-whitesmoke-light;
+$color-border: $clr-gray;
+$color-border-sub: $clr-gray-light;
+$color-mask: $clr-black;
+
+/* z-index */
+$z-close-button: 5500;
+$z-menu: 5000;
+$z-menu-overlay: 4500;
+$z-top-right: 2500;
+$z-header: 2000;
+$z-search-icon-circle: 520;
+$z-search-icon-border: 500;

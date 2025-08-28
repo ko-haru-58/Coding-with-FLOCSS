@@ -1,0 +1,11 @@
+/*----------------------------------------------------------------- */
+/* object/project/_overlay.scss
+/*----------------------------------------------------------------- */
+@use "../../foundation/foundation";
+
+.p-overlay {
+    width: 100%;
+    height: 100%;
+    background-color: foundation.$color-mask;
+    opacity: 0.5;
+}

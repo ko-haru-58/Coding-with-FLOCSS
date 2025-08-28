@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--viewportの幅をデバイスの幅にする-->  
+        <meta name='robots' content='noindex,nofollow'> <!--検索エンジンのクローラーにインデックスさせない-->
+        <title>Hamburger</title>
+        <meta name="description" content="Hamburger">
+        <link rel="icon" href="./favicon.ico">
+
+        <!-- Googleフォント -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=M+PLUS+1p&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="./css/style.css">
+
+        <!-- JavaScript -->
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>  <!--JQuery-->
+        <script type="text/javascript" src="./js/main.js"></script>
+    </head>
+
+    <body class = "front-page">
+        <div class = "l-wrapper">
+            <header class = "l-header" role = "banner">
+                <div class = "p-header">
+                    <button class = "p-header__menu-button" id = "js-menu-button" type = "button" aria-label = "メニュー" aria-controls = "menu-list" aria-expanded="false">Menu</button>
+                    <div class = "p-header__wrapper">
+                        <p class = "p-header__sitename">Hamburger</p>
+                        <div class="c-search-form">
+                            <search>
+                                <form action = "/search" method = "GET" class = "c-search-form__form">
+                                    <div class="c-search-form__input-wrap">
+                                        <input type="search" id="site-search" name="q" class = "c-search-form__input"/>
+                                    </div>
+                                    <button type="submit" class="c-search-form__button">検索</button>                
+                                </form>
+                            </search>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <main class = "l-main">
+                <div class = "p-main-visual">
+                    <picture>
+                        <source srcset = "./images/main-visual_sp.jpg" media = "(max-width: 767px)" >
+                        <source srcset = "./images/main-visual_tab.jpg" media = "(max-width: 1279px)" >
+                        <img src = "./images/main-visual_pc.jpg" alt="メインビジュアル。机の上のハンバーガーや野菜の写真" class = "p-main-visual__image">
+                    </picture>
+                    <h1 class = "p-main-visual__heading">ダミーサイト</h1>
+                </div>
+
+                <div class = "p-service-type">
+                    <section class = "p-service-type-item p-service-type-item--take-out">
+                        <div class="c-service-card">
+                            <picture>
+                                <source srcset = "./images/take-out_sp.jpg" media = "(max-width: 767px)" >
+                                <source srcset = "./images/take-out_tab.jpg" media = "(max-width: 1279px)" >
+                                <img src = "./images/take-out_pc.jpg" alt="テイクアウトで野外で配膳されたハンバーガーの写真" class = "c-service-card__image">
+                            </picture>
+                            <div class = "c-service-card__wrapper">
+                                <div class = "c-service-card__heading-wrapper">
+                                    <h2 class = "c-service-card__heading">Take Out</h2>
+                                    <div class = "c-service-card__heading-underline"></div>
+                                </div>
+                                <div class = "c-service-card__text-wrapper">
+                                    <div class = "c-service-card__text-container">
+                                        <p class = "c-service-card__text--large">Take Out</p>
+                                        <p class = "c-service-card__text">
+                                            当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウトで利用できる商品を掲載しています
+                                        </p>
+                                    </div>
+                                    <div class = "c-service-card__text-container">
+                                        <p class = "c-service-card__text--large">Take Out</p>
+                                        <p class = "c-service-card__text">
+                                            当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウトで利用できる商品を掲載しています
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class = "p-service-type-item">
+                        <div class="c-service-card">
+                            <picture>
+                                <source srcset = "./images/eat-in_sp.jpg" media = "(max-width: 767px)" >
+                                <source srcset = "./images/eat-in_tab.jpg" media = "(max-width: 1279px)" >
+                                <img src = "./images/eat-in_pc.jpg" alt="イートインで室内に配膳されたハンバーガーの写真" class = "c-service-card__image">
+                            </picture>
+                            <div class = "c-service-card__wrapper">
+                                <div class = "c-service-card__heading-wrapper">
+                                    <h2 class = "c-service-card__heading">Eat In</h2>
+                                    <div class = "c-service-card__heading-underline"></div>
+                                </div>
+                                <div class = "c-service-card__text-wrapper">
+                                    <div class = "c-service-card__text-container">
+                                        <p class = "c-service-card__text--large">Eat In</p>
+                                        <p class = "c-service-card__text">
+                                            店内でお食事いただけるメニューです店内でお食事いただけるメニューです店内でお食事いただけるメニューです
+                                        </p>
+                                    </div>
+                                    <div class = "c-service-card__text-container">
+                                        <p class = "c-service-card__text--large">Eat In</p>
+                                        <p class = "c-service-card__text">
+                                            店内でお食事いただけるメニューです店内でお食事いただけるメニューです店内でお食事いただけるメニューです
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <section class = "p-access">
+                    <div class = "p-access__mask--dark"></div>
+                    <div class = "p-access__map"></div>
+                    <div class = "p-access__mask--darker"></div>
+                    <div class = "p-access__top-layer">
+                        <div class = "p-access__heading-wrapper">
+                            <h2 class = "p-access__heading">見出しが入ります</h2>
+                            <div class = "p-access__heading-underline"></div>
+                        </div>
+                        <div class = "p-access__text">
+                            テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                            テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                            テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                            テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                            テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                            テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                            テキストが入ります。テキストが入ります。テキストが入りま
+                        </div>
+                    </div>
+                </section>
+
+            </main>
+
+            <div class = "l-sidebar">
+                <section class = "p-menu">
+                    <button class = "p-menu__close-button"  id = "js-close-button" aria-label = "メニューを閉じる"></button>
+                    <h2 class = "p-menu__heading">Menu</h2>
+                    <nav class ="p-menu__nav">
+                        <ul class="p-menu__list--level1">
+                            <li class="p-menu__item--level1"><a class="p-menu__link--level1" href="#">バーガー</a>
+                                <ul class="p-menu__list--level2">
+                                    <li class="p-menu__item--level2"><a class="p-menu__link--level2" href="#">ハンバーガー</a></li>
+                                    <li class="p-menu__item--level2"><a class="p-menu__link--level2" href="#">チーズバーガー</a></li>
+                                    <li class="p-menu__item--level2"><a class="p-menu__link--level2" href="#">テリヤキバーガー</a></li>
+                                    <li class="p-menu__item--level2"><a class="p-menu__link--level2" href="#">アボカドバーガー</a></li>
+                                    <li class="p-menu__item--level2"><a class="p-menu__link--level2" href="#">フィッシュバーガー</a></li>
+                                    <li class="p-menu__item--level2"><a class="p-menu__link--level2" href="#">ベーコンバーガー</a></li>
+                                    <li class="p-menu__item--level2"><a class="p-menu__link--level2" href="#">チキンバーガー</a></li>
+                                </ul>
+                            </li>
+                            <li class="p-menu__item--level1"><a class="p-menu__link--level1" href="#">サイド</a>
+                                <ul class="p-menu__list--level2">
+                                    <li class="p-menu__item--level2"><a class="p-menu__link--level2" href="#">ポテト</a></li>
+                                    <li class="p-menu__item--level2"><a class="p-menu__link--level2" href="#">サラダ</a></li>
+                                    <li class="p-menu__item--level2"><a class="p-menu__link--level2" href="#">ナゲット</a></li>
+                                    <li class="p-menu__item--level2"><a class="p-menu__link--level2" href="#">コーン</a></li>
+                                </ul>
+                            </li>
+                            <li class="p-menu__item--level1"><a class="p-menu__link--level1" href="#">ドリンク</a>
+                                <ul class="p-menu__list--level2">
+                                    <li class="p-menu__item--level2"><a class="p-menu__link--level2" href="#">コーラ</a></li>
+                                    <li class="p-menu__item--level2"><a class="p-menu__link--level2" href="#">ファンタ</a></li>
+                                    <li class="p-menu__item--level2"><a class="p-menu__link--level2" href="#">オレンジ</a></li>
+                                    <li class="p-menu__item--level2"><a class="p-menu__link--level2" href="#">アップル</a></li>
+                                    <li class="p-menu__item--level2"><a class="p-menu__link--level2" href="#">紅茶（Ice/Hot）</a></li>
+                                    <li class="p-menu__item--level2"><a class="p-menu__link--level2" href="#">コーヒー（Ice/Hot）</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </section>
+            </div>
+
+            <div class = "l-overlay">
+                <div class = "p-overlay"></div>
+            </div>
+
+            <footer class = "l-footer">
+                <div class = p-footer>
+                    <a class = "p-footer__shop-infomation--link" href = "#">ショップ情報｜ヒストリー</a>
+                    <p class = "p-footer__copylight">Copyright: RaiseTech</p>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,88 @@
+/*----------------------------------------------------------------- */
+/* layout/_layout.scss
+/*----------------------------------------------------------------- */
+@use "../foundation/foundation";
+
+.l-wrapper{
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: 215px 1fr 150px;
+    grid-template-areas:
+        "head"
+        "main"
+        "foot";
+
+    @include foundation.breakpoint(tablet) {
+        grid-template-rows: 217px 1fr 150px;
+    }
+
+    @include foundation.breakpoint(pc) {
+        grid-template-columns: 1fr 19.2% ;
+        grid-template-rows: 217px 1fr 150px;
+        grid-template-areas:
+            "head side"
+            "main side"
+            "foot foot";
+    }
+}
+
+.l-header{
+    grid-area: head;
+    position: sticky;
+    top: 0;
+    z-index: foundation.$z-header;
+    background-color: foundation.$color-background-header;
+}
+
+.l-main{
+    grid-area: main;
+    background-color: foundation.$color-base;
+}
+
+.l-sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: foundation.$z-menu;
+    background-color: foundation.$color-background-sidebar;
+    width: 87.5vw;
+    max-width: 367px;
+    height: 100vh;  //メニューにスクロールバーを表示するため
+    overflow-y: auto;   //メニューにスクロールバーを表示するため
+    transform: translateX(100%);    //初期状態は画面の右に出して非表示にする
+    transition: all 0.3s ease;
+    
+    @include foundation.breakpoint(pc) {
+        position: static;
+        transform: translateX(0);
+        grid-area: side;
+        width: auto;
+        max-width: none;
+        height: auto;
+        overflow-y: visible;
+    }
+
+    &.open{
+        transform: translateX(0);
+    }
+}
+
+.l-overlay{
+    position: fixed;
+    inset: 0;
+    z-index: foundation.$z-menu-overlay;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+
+    &.is-active {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.l-footer{
+    grid-area: foot;
+    background-image: url(../../images/footer.jpg);
+    overflow: hidden;
+}

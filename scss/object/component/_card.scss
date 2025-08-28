@@ -1,0 +1,121 @@
+/*----------------------------------------------------------------- */
+/* object/component/_card.scss
+/*----------------------------------------------------------------- */
+@use "../../foundation/foundation";
+
+.c-service-card{
+    position: relative;
+
+    &__image{
+        display: block;
+        width: 100%;
+    }
+
+    &__wrapper{
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__heading-wrapper{
+        padding-top: 4.9%;
+        padding-left: 4.5%;
+
+        @include foundation.breakpoint(tablet) {
+            padding-top: 5.0%;
+            padding-left: 3.1%;
+        }
+
+        @include foundation.breakpoint(pc) {
+            padding-top: 5.0%;
+            padding-left: 1.6%;
+        }
+    }
+
+    &__heading{
+        color: foundation.$color-text-white;
+        font-size: foundation.font-size-rem(41);
+        font-weight: foundation.$font-weight-bold;
+        padding-bottom: 18.8px;
+
+        @include foundation.breakpoint(tablet) {
+            font-size: foundation.font-size-rem(44);
+            padding-bottom: 25.6px;
+        }
+
+        @include foundation.breakpoint(pc) {
+            font-size: foundation.font-size-rem(80);
+            padding-bottom: 46px;
+        }
+    }
+
+    &__heading-underline{
+        background-color: foundation.$color-background-underline;
+        width: 33.9px;
+        height: 4px;
+        margin-left: 0.5px;
+
+        @include foundation.breakpoint(tablet) {
+            width: 35.9px;
+            margin-left: 4.1px;
+        }
+
+        @include foundation.breakpoint(pc) {
+            width: 63px;
+            margin-left: 7.5px;
+        }
+    }
+
+    &__text-container{
+        background-color: foundation.$color-background-white;
+        opacity: 0.8;
+        margin: 0 16px 16px 16px;
+        padding: 16px;
+        aspect-ratio: 101/52;
+
+        @include foundation.breakpoint(tablet) {
+            margin: 0 16px 16px 16px;
+            padding: 16px;
+            aspect-ratio: 65/31;
+        }
+
+        @include foundation.breakpoint(pc) {
+            margin: 0 16px 16px 16px;
+            padding: 16px;
+            aspect-ratio: 73/20;
+        }
+    }
+
+    &__text--large{
+        font-size: foundation.font-size-rem(22);
+        font-weight: foundation.$font-weight-bold;
+        padding-bottom: 8px;
+
+        @include foundation.breakpoint(tablet) {
+            font-size: foundation.font-size-rem(24);
+            padding-bottom: 16px;
+        }
+
+        @include foundation.breakpoint(pc) {
+            padding-bottom: 10px;
+        }
+
+    }
+
+    &__text{
+        line-height: 1.5;
+
+        @include foundation.breakpoint(tablet) {
+            font-size: foundation.font-size-rem(14);
+        }
+
+        @include foundation.breakpoint(pc) {
+            font-size: foundation.font-size-rem(16);
+        }
+    }
+}
