@@ -13,6 +13,27 @@ body{
     font-size: foundation.font-size-rem(16);
     font-weight: foundation.$font-weight-regular;
     line-height: 1.0;
+
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: 215px 1fr 150px;
+    grid-template-areas:
+        "head"
+        "main"
+        "foot";
+
+    @include foundation.breakpoint(tablet) {
+        grid-template-rows: 217px 1fr 150px;
+    }
+
+    @include foundation.breakpoint(pc) {
+        grid-template-columns: 1fr 19.2% ;
+        grid-template-rows: 217px 1fr 150px;
+        grid-template-areas:
+            "head side"
+            "main side"
+            "foot foot";
+    }
 }
 
 h1, h2, h3, h4, h5, h6 {

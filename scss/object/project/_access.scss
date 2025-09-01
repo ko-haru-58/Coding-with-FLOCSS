@@ -6,33 +6,31 @@
 .p-access{
     position: relative;
     width: 100%;
-    aspect-ratio: 25 / 46;
+    min-height: 177vw;
 
     @include foundation.breakpoint(tablet){
-        aspect-ratio: 167 / 83;
+        min-height: 49vw;
     }
 
     @include foundation.breakpoint(pc){
-        aspect-ratio: 311 / 130;
+        min-height: 33vw;
     }
 
     &__mask--dark{
         position: absolute;
-        top: 0;
-        left: 0;
+        inset: 0;
+        z-index: foundation.$z-access-mask-dark;
         background-color: foundation.$color-mask;
-        width: 100%;
-        height: 100%;
     }
 
     &__map{
         position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
+        inset: 0;
+        z-index: foundation.$z-access-map;
         background-image: url(../../../images/map.jpg);
         background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
         opacity: 0.6;
     }
 
@@ -40,6 +38,7 @@
         position: absolute;
         top: 0;
         left: 0;
+        z-index: foundation.$z-access-mask-darker;
         background-color: foundation.$color-mask;
         opacity: 0.29;
         width: 100%;
@@ -55,11 +54,10 @@
     }
 
     &__top-layer{
-        position: absolute;
-        top: 0;
-        left: 0;
+        position: relative; //z-indexで最上層にするために設定。absoluteだと親要素に高さが反映されたないためrelativeに。
+        z-index: foundation.$z-access-top-layer;
         width: 100%;
-        height: 100%;
+        height: auto;
         padding: 13.2% 10.7% 15.2% 10.7%;
 
         @include foundation.breakpoint(tablet){

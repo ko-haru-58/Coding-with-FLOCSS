@@ -3,29 +3,6 @@
 /*----------------------------------------------------------------- */
 @use "../foundation/foundation";
 
-.l-wrapper{
-    display: grid;
-    grid-template-columns: 1fr ;
-    grid-template-rows: 215px 1fr 150px;
-    grid-template-areas:
-        "head"
-        "main"
-        "foot";
-
-    @include foundation.breakpoint(tablet) {
-        grid-template-rows: 217px 1fr 150px;
-    }
-
-    @include foundation.breakpoint(pc) {
-        grid-template-columns: 1fr 19.2% ;
-        grid-template-rows: 217px 1fr 150px;
-        grid-template-areas:
-            "head side"
-            "main side"
-            "foot foot";
-    }
-}
-
 .l-header{
     grid-area: head;
     position: sticky;
@@ -64,20 +41,6 @@
 
     &.open{
         transform: translateX(0);
-    }
-}
-
-.l-overlay{
-    position: fixed;
-    inset: 0;
-    z-index: foundation.$z-menu-overlay;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-
-    &.is-active {
-        opacity: 1;
-        visibility: visible;
     }
 }
 

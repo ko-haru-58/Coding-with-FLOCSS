@@ -51,7 +51,6 @@
         padding: 0;
         margin: -1px;
         overflow: hidden;
-        white-space: nowrap;
         border: 0;
         clip-path: inset(50%);
         //↑↑↑ 非表示の設定
@@ -61,7 +60,6 @@
             width: auto;
             height: auto;
             overflow: visible;
-            white-space: normal;
             clip-path: none;
             font-size: foundation.font-size-rem(34);
             margin-top: 87px;
@@ -104,9 +102,7 @@
             @include foundation.breakpoint(tablet) {
                 margin-bottom: 59px;
             }
-
         }
-
     }
 
     &__link--level2{

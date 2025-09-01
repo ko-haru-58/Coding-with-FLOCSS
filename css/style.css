@@ -305,6 +305,22 @@ body {
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 1;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 215px 1fr 150px;
+  grid-template-areas: "head" "main" "foot";
+}
+@media screen and (min-width: 768px) {
+  body {
+    grid-template-rows: 217px 1fr 150px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  body {
+    grid-template-columns: 1fr 19.2%;
+    grid-template-rows: 217px 1fr 150px;
+    grid-template-areas: "head side" "main side" "foot foot";
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -367,25 +383,6 @@ li {
 /*----------------------------------------------------------------- */
 /* layout/_layout.scss
 /*----------------------------------------------------------------- */
-.l-wrapper {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 215px 1fr 150px;
-  grid-template-areas: "head" "main" "foot";
-}
-@media screen and (min-width: 768px) {
-  .l-wrapper {
-    grid-template-rows: 217px 1fr 150px;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .l-wrapper {
-    grid-template-columns: 1fr 19.2%;
-    grid-template-rows: 217px 1fr 150px;
-    grid-template-areas: "head side" "main side" "foot foot";
-  }
-}
-
 .l-header {
   grid-area: head;
   position: -webkit-sticky;
@@ -428,19 +425,6 @@ li {
   transform: translateX(0);
 }
 
-.l-overlay {
-  position: fixed;
-  inset: 0;
-  z-index: 4500;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
-}
-.l-overlay.is-active {
-  opacity: 1;
-  visibility: visible;
-}
-
 .l-footer {
   grid-area: foot;
   background-image: url(../../images/footer.jpg);
@@ -451,21 +435,24 @@ li {
 /* object/component/_card.scss
 /*----------------------------------------------------------------- */
 .c-service-card {
-  position: relative;
-}
-.c-service-card__image {
-  display: block;
-  width: 100%;
-}
-.c-service-card__wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
-  height: 100%;
+  min-height: 165vw;
+}
+@media screen and (min-width: 768px) {
+  .c-service-card {
+    min-height: 80vw;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .c-service-card {
+    min-height: 62vw;
+  }
 }
 .c-service-card__heading-wrapper {
   padding-top: 4.9%;
@@ -519,26 +506,28 @@ li {
     margin-left: 7.5px;
   }
 }
+.c-service-card__text-wrapper {
+  padding: 16px;
+}
 .c-service-card__text-container {
   background-color: #FFFFFF;
   opacity: 0.8;
-  margin: 0 16px 16px 16px;
+  min-height: 40vw;
+  width: 100%;
   padding: 16px;
-  aspect-ratio: 101/52;
 }
 @media screen and (min-width: 768px) {
   .c-service-card__text-container {
-    margin: 0 16px 16px 16px;
-    padding: 16px;
-    aspect-ratio: 65/31;
+    min-height: 18vw;
   }
 }
 @media screen and (min-width: 1280px) {
   .c-service-card__text-container {
-    margin: 0 16px 16px 16px;
-    padding: 16px;
-    aspect-ratio: 73/20;
+    min-height: 8vw;
   }
+}
+.c-service-card__text-container:first-child {
+  margin-bottom: 16px;
 }
 .c-service-card__text--large {
   font-size: 2.2rem;
@@ -776,52 +765,108 @@ li {
     justify-content: space-between;
   }
 }
+@media screen and (min-width: 768px) {
+  .p-service-type-item {
+    width: 42.8%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .p-service-type-item {
+    width: 39.7%;
+  }
+}
 .p-service-type-item:nth-child(1) {
   margin-top: 5.3%;
-  margin-left: 5.3%;
-  margin-right: 5.3%;
   margin-bottom: 5.3%;
+  margin-right: 5.3%;
+  margin-left: 5.3%;
 }
 @media screen and (min-width: 768px) {
   .p-service-type-item:nth-child(1) {
     margin-top: 4.8%;
-    margin-left: 4.8%;
-    margin-right: 4.8%;
     margin-bottom: 4.8%;
+    margin-right: 4.8%;
+    margin-left: 4.8%;
   }
 }
 @media screen and (min-width: 1280px) {
   .p-service-type-item:nth-child(1) {
     margin-top: 7.7%;
-    margin-left: 7.7%;
-    margin-right: 5.2%;
     margin-bottom: 8.4%;
+    margin-right: 5.2%;
+    margin-left: 7.7%;
   }
 }
 .p-service-type-item:nth-child(2) {
   margin-top: 0;
-  margin-left: 5.3%;
-  margin-right: 5.3%;
   margin-bottom: 13.1%;
+  margin-right: 5.3%;
+  margin-left: 5.3%;
 }
 @media screen and (min-width: 768px) {
   .p-service-type-item:nth-child(2) {
     margin-top: 4.8%;
-    margin-left: 0;
-    margin-right: 4.8%;
     margin-bottom: 4.8%;
+    margin-right: 4.8%;
+    margin-left: 0;
   }
 }
 @media screen and (min-width: 1280px) {
   .p-service-type-item:nth-child(2) {
     margin-top: 7.7%;
-    margin-left: 0;
-    margin-right: 7.7%;
     margin-bottom: 8.4%;
+    margin-right: 7.7%;
+    margin-left: 0;
+  }
+}
+.p-service-type-item--take-out {
+  grid-column: 1;
+  grid-row: 1;
+}
+@media screen and (min-width: 768px) {
+  .p-service-type-item--take-out {
+    grid-column: 1;
+    grid-row: 1;
+  }
+}
+.p-service-type-item--take-out .c-service-card {
+  background-image: url("./../../../images/take-out_sp.jpg");
+}
+@media screen and (min-width: 768px) {
+  .p-service-type-item--take-out .c-service-card {
+    background-image: url("./../../../images/take-out_tab.jpg");
+  }
+}
+@media screen and (min-width: 1280px) {
+  .p-service-type-item--take-out .c-service-card {
+    background-image: url("./../../../images/take-out_pc.jpg");
   }
 }
 .p-service-type-item--take-out .c-service-card__heading {
   color: #EAEAEA;
+}
+.p-service-type-item--eat-in {
+  grid-column: 1;
+  grid-row: 2;
+}
+@media screen and (min-width: 768px) {
+  .p-service-type-item--eat-in {
+    grid-column: 2;
+    grid-row: 1;
+  }
+}
+.p-service-type-item--eat-in .c-service-card {
+  background-image: url("./../../../images/eat-in_sp.jpg");
+}
+@media screen and (min-width: 768px) {
+  .p-service-type-item--eat-in .c-service-card {
+    background-image: url("./../../../images/eat-in_tab.jpg");
+  }
+}
+@media screen and (min-width: 1280px) {
+  .p-service-type-item--eat-in .c-service-card {
+    background-image: url("./../../../images/eat-in_pc.jpg");
+  }
 }
 
 /*----------------------------------------------------------------- */
@@ -830,40 +875,39 @@ li {
 .p-access {
   position: relative;
   width: 100%;
-  aspect-ratio: 25/46;
+  min-height: 177vw;
 }
 @media screen and (min-width: 768px) {
   .p-access {
-    aspect-ratio: 167/83;
+    min-height: 49vw;
   }
 }
 @media screen and (min-width: 1280px) {
   .p-access {
-    aspect-ratio: 311/130;
+    min-height: 33vw;
   }
 }
 .p-access__mask--dark {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
+  z-index: 320;
   background-color: #000000;
-  width: 100%;
-  height: 100%;
 }
 .p-access__map {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
+  z-index: 340;
   background-image: url(../../../images/map.jpg);
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   opacity: 0.6;
 }
 .p-access__mask--darker {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 360;
   background-color: #000000;
   opacity: 0.29;
   width: 100%;
@@ -880,11 +924,10 @@ li {
   }
 }
 .p-access__top-layer {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
+  z-index: 380;
   width: 100%;
-  height: 100%;
+  height: auto;
   padding: 13.2% 10.7% 15.2% 10.7%;
 }
 @media screen and (min-width: 768px) {
@@ -988,7 +1031,6 @@ li {
   padding: 0;
   margin: -1px;
   overflow: hidden;
-  white-space: nowrap;
   border: 0;
   -webkit-clip-path: inset(50%);
           clip-path: inset(50%);
@@ -999,7 +1041,6 @@ li {
     width: auto;
     height: auto;
     overflow: visible;
-    white-space: normal;
     -webkit-clip-path: none;
             clip-path: none;
     font-size: 3.4rem;
@@ -1052,10 +1093,24 @@ li {
 /* object/project/_overlay.scss
 /*----------------------------------------------------------------- */
 .p-overlay {
-  width: 100%;
-  height: 100%;
+  position: fixed;
+  inset: 0;
+  z-index: 4500;
+  width: 100vw;
+  height: 100vh;
   background-color: #000000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.p-overlay.is-active {
   opacity: 0.5;
+  visibility: visible;
+}
+@media screen and (min-width: 1280px) {
+  .p-overlay {
+    display: none;
+  }
 }
 
 /*----------------------------------------------------------------- */

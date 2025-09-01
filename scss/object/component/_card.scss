@@ -4,22 +4,21 @@
 @use "../../foundation/foundation";
 
 .c-service-card{
-    position: relative;
+    background-size: cover; //background-imageは「_service-type.scss」で指定
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 165vw;
 
-    &__image{
-        display: block;
-        width: 100%;
+    @include foundation.breakpoint(tablet){
+        min-height: 80vw;
     }
 
-    &__wrapper{
-        position: absolute;
-        top: 0;
-        left: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 100%;
-        height: 100%;
+    @include foundation.breakpoint(pc){
+        min-height: 62vw;
     }
 
     &__heading-wrapper{
@@ -71,23 +70,27 @@
         }
     }
 
+    &__text-wrapper{
+        padding: 16px;
+    }
+
     &__text-container{
         background-color: foundation.$color-background-white;
         opacity: 0.8;
-        margin: 0 16px 16px 16px;
+        min-height: 40vw;
+        width: 100%;
         padding: 16px;
-        aspect-ratio: 101/52;
-
-        @include foundation.breakpoint(tablet) {
-            margin: 0 16px 16px 16px;
-            padding: 16px;
-            aspect-ratio: 65/31;
+        
+        @include foundation.breakpoint(tablet){
+            min-height: 18vw;
         }
 
-        @include foundation.breakpoint(pc) {
-            margin: 0 16px 16px 16px;
-            padding: 16px;
-            aspect-ratio: 73/20;
+        @include foundation.breakpoint(pc){
+            min-height: 8vw;
+        }
+        
+        &:first-child{
+            margin-bottom: 16px;
         }
     }
 
