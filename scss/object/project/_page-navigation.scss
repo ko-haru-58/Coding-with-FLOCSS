@@ -1,0 +1,21 @@
+/*----------------------------------------------------------------- */
+/* object/project/_page-navigation.scss
+/*----------------------------------------------------------------- */
+@use "../../foundation/foundation";
+
+.p-page-navigation{
+    display: flex;
+    justify-content: center;
+    margin-top: 4.8rem;
+    margin-bottom: 3.2rem;
+
+    @include foundation.breakpoint(tablet){
+        margin-top: 10.7rem;
+        margin-bottom: 3.2rem;
+    }
+
+    @include foundation.breakpoint(pc){
+        margin-top: 15.0rem;
+        margin-bottom: 6.4rem;
+    }
+}

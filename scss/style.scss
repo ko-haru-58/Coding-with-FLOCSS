@@ -1,36 +1,45 @@
-/* ============================== */
-/* Foundation */
-/* ============================== */
+// ============================== 
+// Foundation
+// ==============================
 @use "./foundation/_ress";
 @use "./foundation/_base";
 
-/* ============================== */
-/* Layout */
-/* ============================== */
+// ==============================
+// Layout
+// ==============================
 @use "./layout/_layout";
 
-/* ============================== */
-/* Object */
-/* ============================== */
+// ==============================
+// Object
+// ==============================
 
-/*-------------------- */
-/* Component */
-/*-------------------- */
+// --------------------
+// Component
+// --------------------
+@use "./object/component/_article-block";
+@use "./object/component/_button";
 @use "./object/component/_card";
+@use "./object/component/_pagination";
 @use "./object/component/_search-form";
+@use "./object/component/_table";
 
-/*-------------------- */
-/* Project */
-/*-------------------- */
-@use "./object/project/_header";
-@use "./object/project/_main-visual";
-@use "./object/project/_service-type";
+// --------------------
+// Project
+// --------------------
 @use "./object/project/_access";
+@use "./object/project/_article";
+@use "./object/project/_footer";
+@use "./object/project/_header";
+@use "./object/project/_lead";
+@use "./object/project/_main-visual";
+@use "./object/project/menu-card";
 @use "./object/project/_menu";
 @use "./object/project/_overlay";
-@use "./object/project/_footer";
+@use "./object/project/_page-navigation";
+@use "./object/project/_service-type";
 
-/*-------------------- */
-/* Utility */
-/*-------------------- */
+
+// -------------------- 
+// Utility
+// --------------------
 @use "./object/utility/_utility";

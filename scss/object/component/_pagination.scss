@@ -1,0 +1,74 @@
+/*----------------------------------------------------------------- */
+/* object/component/_pagination.scss
+/*----------------------------------------------------------------- */
+@use "../../foundation/foundation";
+
+.c-pagination{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: foundation.$color-text-sub;
+    width: 89.3%;
+
+    @include foundation.breakpoint(tablet){
+        width: auto;
+    }
+
+    &__link--moving, &__link--number{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        @include foundation.breakpoint(tablet){
+            height: 35px;
+        }
+    }
+
+    &__link--moving{
+        font-size: foundation.font-size-rem(17);
+    }
+
+    &__link--text{
+        font-size: foundation.font-size-rem(16);
+    }
+
+    &__link--number{
+        font-weight: foundation.$font-weight-bold;
+        width: 35px;
+        border: 1px solid foundation.$color-border-sub;
+
+        &.is-current {
+            color: foundation.$color-text-white;
+            background-color: foundation.$color-background-pagination;
+        }
+
+    }
+
+    &__info{
+        font-weight: foundation.$font-weight-bold;
+        margin-right: 19px;
+    }
+
+    &__list{
+        display: flex;
+        justify-content: space-between;
+        gap: 15px;
+    }
+    
+    &--simple{
+        @include foundation.breakpoint(tablet){
+            display: none;
+        }
+    }
+
+    &--detailed{
+        display: none; 
+
+        @include foundation.breakpoint(tablet){
+            display: flex;
+        }
+    
+    }
+
+}

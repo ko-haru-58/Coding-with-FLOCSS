@@ -1,0 +1,46 @@
+/*----------------------------------------------------------------- */
+/* object/component/_article-block.scss
+/*----------------------------------------------------------------- */
+@use "../../foundation/foundation";
+
+.c-quote-box{
+    background-color: foundation.$color-background-article-block;
+    padding-top: 3.0rem;
+    padding-right: 1.6rem;
+    padding-bottom: 2.7rem;
+    padding-left: 2.0rem;
+
+    @include foundation.breakpoint(tablet){
+        padding-top: 5.0rem;
+        padding-right: 5.6rem;
+        padding-bottom: 5.7rem;
+        padding-left: 5.0rem;        
+    }
+
+    @include foundation.breakpoint(pc){
+        padding-top: 5.0rem;
+        padding-right: 6.0rem;
+        padding-bottom: 4.7rem;
+        padding-left: 5.0rem;        
+    }
+
+    &__source{
+        @include foundation.breakpoint(tablet){
+            margin-top: 5.2rem;
+        }
+    }
+
+    &__cite--link{
+        color: foundation.$color-link;
+        font-style: normal;
+        text-decoration: underline;
+    }
+}
+
+.c-code-brock{
+    background-color: foundation.$color-background-article-block;
+    padding-top: 5.0rem;
+    padding-right: 5.0rem;
+    padding-bottom: 5.0rem;
+    padding-left: 5.0rem;
+}

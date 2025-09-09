@@ -1,0 +1,404 @@
+/*----------------------------------------------------------------- */
+/* object/project/_article.scss
+/*----------------------------------------------------------------- */
+@use "../../foundation/foundation";
+
+.p-article{
+    &__heading{
+        &--lv2{
+            margin-top: 4.0rem;
+            margin-right: 2.0rem;
+            margin-bottom: 3.2rem;
+            margin-left: 2.0rem;
+
+            @include foundation.breakpoint(tablet){
+                margin-top: 6.8rem;
+                margin-right: 6.0rem;
+                margin-bottom: 6.3rem;
+                margin-left: 6.0rem;
+            }
+
+            @include foundation.breakpoint(pc){
+                margin-top: 7.2rem;
+                margin-right: 10.0rem;
+                margin-bottom: 6.5rem;
+                margin-left: 10.0rem;
+            }
+        }
+
+        &--lv3{
+            margin-right: 2.0rem;
+            margin-bottom: 4.0rem;
+            margin-left: 2.0rem;
+
+            @include foundation.breakpoint(tablet){
+                margin-right: 6.0rem;
+                margin-bottom: 6.8rem;
+                margin-left: 6.0rem;
+            }
+
+            @include foundation.breakpoint(pc){
+                margin-right: 10.0rem;
+                margin-bottom: 6.8rem;
+                margin-left: 10.0rem;
+            }
+        }
+
+        &--lv4{
+            margin-right: 2.0rem;
+            margin-bottom: 4.4rem;
+            margin-left: 2.0rem;
+
+            @include foundation.breakpoint(tablet){
+                margin-right: 6.0rem;
+                margin-bottom: 8.3rem;
+                margin-left: 6.0rem;
+            }
+
+            @include foundation.breakpoint(pc){
+                margin-right: 10.0rem;
+                margin-bottom: 6.7rem;
+                margin-left: 10.0rem;
+            }
+        }
+
+        &--lv5{
+            margin-right: 2.0rem;
+            margin-bottom: 3.7rem;
+            margin-left: 2.0rem;
+
+            @include foundation.breakpoint(tablet){
+                margin-right: 6.0rem;
+                margin-bottom: 6.7rem;
+                margin-left: 6.0rem;
+            }
+
+            @include foundation.breakpoint(pc){
+                margin-right: 10.0rem;
+                margin-bottom: 6.7rem;
+                margin-left: 10.0rem;
+            }
+        }
+
+        &--lv6{
+            margin-right: 2.0rem;
+            margin-bottom: 3.1rem;
+            margin-left: 2.0rem;
+
+            @include foundation.breakpoint(tablet){
+                margin-right: 6.0rem;
+                margin-bottom: 6.1rem;
+                margin-left: 6.0rem;
+            }
+    
+            @include foundation.breakpoint(pc){
+                margin-right: 10.0rem;
+                margin-bottom: 6.1rem;
+                margin-left: 10.0rem;
+            }
+        }
+    }
+
+    &__body{
+        margin-right: 2.0rem;
+        margin-bottom: 4.2rem;
+        margin-left: 2.0rem;
+
+        @include foundation.breakpoint(tablet){
+            margin-right: 6.0rem;
+            margin-bottom: 6.9rem;
+            margin-left: 6.0rem;
+        }
+
+        @include foundation.breakpoint(pc){
+            margin-right: 10.0rem;
+            margin-bottom: 6.5rem;
+            margin-left: 10.0rem;
+        }
+    }
+
+    &__quote-box{
+        margin-right: 2.0rem;
+        margin-bottom: 3.0rem;
+        margin-left: 2.0rem;        
+
+        @include foundation.breakpoint(tablet){
+            margin-right: 6.0rem;
+            margin-bottom: 6.0rem;
+            margin-left: 6.0rem;
+        }
+
+        @include foundation.breakpoint(pc){
+            margin-right: 10.0rem;
+            margin-bottom: 6.0rem;
+            margin-left: 10.0rem;
+        }
+    }
+
+    &__image--slender{
+        width: calc(100% - 4.0rem);
+        aspect-ratio: 27 / 10;
+        object-fit: cover;
+        object-position: center 83%;
+        margin-right: 2.0rem;
+        margin-bottom: 3.0rem;
+        margin-left: 2.0rem;
+
+        @include foundation.breakpoint(tablet){
+            width: calc(100% - 12.0rem);
+            margin-right: 6.0rem;
+            margin-bottom: 6.0rem;
+            margin-left: 6.0rem;
+        }
+
+        @include foundation.breakpoint(pc){
+            width: calc(100% - 20.0rem);
+            margin-right: 10.0rem;
+            margin-bottom: 6.0rem;
+            margin-left: 10.0rem;
+        }
+    }
+    
+    &__card--image-left, &__card--image-right{
+        margin-right: 2.0rem;
+        margin-left: 2.0rem;
+
+        @include foundation.breakpoint(tablet){
+            margin-right: 6.0rem;
+            margin-left: 6.0rem;
+        }
+
+        @include foundation.breakpoint(pc){
+            margin-right: 10.0rem;
+            margin-left: 10.0rem;
+        }
+    }
+
+    &__card--image-left{
+        margin-bottom: 3.0rem;
+
+        @include foundation.breakpoint(tablet){
+            margin-bottom: 13.3rem;
+        }
+
+        @include foundation.breakpoint(pc){
+            margin-bottom: 6.0rem;
+        }
+
+    }
+
+    &__card--image-right{
+        margin-bottom: 3.0rem;
+
+        @include foundation.breakpoint(tablet){
+            margin-bottom: 7.0rem;
+        }
+
+        @include foundation.breakpoint(pc){
+            margin-bottom: 6.0rem;
+        }
+    }
+
+    &__image--center{
+        width: calc(100% - 4.0rem - 18.0%);
+        margin-right: calc(2.0rem + 9.0%);
+        margin-bottom: 3.0rem;
+        margin-left: calc(2.0rem + 9.0%);
+
+        @include foundation.breakpoint(tablet){
+            width: calc(100% - 12.0rem - 15.8%);
+            margin-right: calc(6.0rem + 7.9%);
+            margin-bottom: 24.1rem;
+            margin-left: calc(6.0rem + 7.9%);
+        }
+
+        @include foundation.breakpoint(pc){
+            width: calc((100% - 20.0rem) * 0.43);
+            margin-right: auto;
+            margin-bottom: 6.0rem;
+            margin-left: auto;
+        }
+    }
+
+    &__grid{
+        display: grid;
+        grid-template-columns: 1fr ;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+        "grid1"
+        "grid2"
+        "grid3"
+        "grid4"
+        "grid5"
+        "grid6"
+        "grid7"
+        "grid8"
+        "grid9";
+        gap: 2.0rem;
+
+        margin-right: 2.0rem;
+        margin-bottom: 3.3rem;
+        margin-left: 2.0rem;
+
+        @include foundation.breakpoint(tablet){
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+            grid-template-areas:
+            "grid1 grid2"
+            "grid3 grid4"
+            "grid5 grid6"
+            "grid7 grid8"
+            "grid9 .";
+
+            margin-right: 6.0rem;
+            margin-bottom: 6.3rem;
+            margin-left: 6.0rem;
+        }
+
+        @include foundation.breakpoint(pc){
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-areas:
+            "grid1 grid2 grid3" 
+            "grid4 grid5 grid6"
+            "grid7 grid8 grid9";
+
+            margin-right: 10.0rem;
+            margin-bottom: 5.4rem;
+            margin-left: 10.0rem;
+        }
+
+        &-item1{grid-area: grid1;}
+        &-item2{grid-area: grid2;}
+        &-item3{grid-area: grid3;}
+        &-item4{grid-area: grid4;}
+        &-item5{grid-area: grid5;}
+        &-item6{grid-area: grid6;}
+        &-item7{grid-area: grid7;}
+        &-item8{grid-area: grid8;}
+        &-item9{grid-area: grid9;}
+
+        &-image{
+            width: 100%;
+        }
+    }
+
+    &__oredered-list-wrapper{
+        line-height: 1.5;
+        margin-right: 2.0rem;
+        margin-bottom: 5.7rem;
+        margin-left: 2.0rem;
+
+        @include foundation.breakpoint(tablet){
+            margin-right: 11.0rem;
+            margin-left: 11.0rem;
+        }
+
+        @include foundation.breakpoint(pc){
+            margin-right: 15.0rem;
+            margin-left: 15.0rem;
+        }
+    }
+
+    &__unoredered-list-wrapper{
+        line-height: 1.5;
+        margin-right: 2.0rem;
+        margin-bottom: 2.6rem;
+        margin-left: 2.0rem;
+
+        @include foundation.breakpoint(tablet){
+            margin-right: 11.0rem;
+            margin-bottom: 5.6rem;
+            margin-left: 11.0rem;
+        }
+
+        @include foundation.breakpoint(pc){
+            margin-right: 15.0rem;
+            margin-left: 15.0rem;
+        }
+    }
+
+    &__oredered-list2, &__unoredered-list2{
+        margin-top: 1.7rem;
+        margin-bottom: 1.7rem;
+
+    }
+
+    &__oredered-item2, &__unoredered-list2{
+        padding-left: 1.8rem;
+    }
+
+    &__code-brock{
+        margin-right: 2.0rem;
+        margin-bottom: 3.0rem;
+        margin-left: 2.0rem;
+
+        @include foundation.breakpoint(tablet){
+            margin-right: 6.0rem;
+            margin-bottom: 6.0rem;
+            margin-left: 6.0rem;
+        }
+
+        @include foundation.breakpoint(pc){
+            margin-right: 10.0rem;
+            margin-bottom: 5.0rem;
+            margin-left: 10.0rem;
+        }
+    }
+
+    &__table{
+        margin-right: 2.0rem;
+        margin-bottom: 6.0rem;
+        margin-left: 2.0rem;
+
+        @include foundation.breakpoint(tablet){
+            margin-right: 6.0rem;
+            margin-bottom: 6.0rem;
+            margin-left: 6.0rem;
+        }
+
+        @include foundation.breakpoint(pc){
+            margin-right: 10.0rem;
+            margin-bottom: 6.0rem;
+            margin-left: 10.0rem;
+        }
+
+    }
+
+    &__button{
+        margin-right: 2.0rem;
+        margin-bottom: 3.1rem;
+        margin-left: 2.0rem;
+
+        @include foundation.breakpoint(tablet){
+            margin-right: 6.0rem;
+            margin-bottom: 6.1rem;
+            margin-left: 6.0rem;
+        }
+
+        @include foundation.breakpoint(pc){
+            margin-right: 10.0rem;
+            margin-bottom: 6.1rem;
+            margin-left: 10.0rem;
+        }        
+    }
+
+    &__text--bold{
+        font-weight: foundation.$font-weight-bold;
+        margin-right: 2.0rem;
+        margin-bottom: 7.3rem;
+        margin-left: 2.0rem;
+
+        @include foundation.breakpoint(tablet){
+            margin-right: 6.0rem;
+            margin-bottom: 15.3rem;
+            margin-left: 6.0rem;
+        }
+
+        @include foundation.breakpoint(pc){
+            margin-right: 10.0rem;
+            margin-bottom: 27.8rem;
+            margin-left: 10.0rem;
+        }
+    }
+}

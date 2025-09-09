@@ -8,31 +8,37 @@ $font-weight-regular: 400;
 
 /* color */
 //カラーネーム140色はそちらの名前を採用。そのほかの色には「light」「dark」をつけている。
-$clr-white: #FFFFFF;
-$clr-white-dark: #FFFDFA;
-$clr-white-darker: #EAEAEA;
-$clr-whitesmoke-lighter: #F2EDE9;
-$clr-whitesmoke-light: #DED8D3;
-$clr-whitesmoke: #f5f5f5;
-$clr-orange-light: #FFF7EF;
-$clr-brown-dark:#3C2A10;
-$clr-gray: #808080;
-$clr-gray-light: #707070;
-$clr-gray-lighter: #F2EDE9;
 $clr-black: #000000;
+$clr-gray-dark: #707070;
+$clr-gray: #808080;
+$clr-gray-light: #F2EDE9;
+$clr-brown-darker: #3C2B1C;
+$clr-brown-dark:#3C2A10;
+$clr-orange-light: #FFF7EF;
+$clr-darkblue-light:#4A6C9B;
+$clr-whitesmoke-darker: #DED8D3;
+$clr-whitesmoke-dark: #F2EDE9;
+$clr-whitesmoke: #F5F5F5;
+$clr-white-darker: #EAEAEA;
+$clr-white-dark: #FFFDFA;
+$clr-white: #FFFFFF;
 
 $color-base: $clr-white-dark;
 $color-text: $clr-brown-dark;
-$color-text-sub: $clr-gray-light;
+$color-text-sub: $clr-gray-dark;
 $color-text-white: $clr-white;
+$color-link: $clr-darkblue-light;
 $color-background-white: $clr-white;
 $color-background-underline: $clr-white;
 $color-background-header: $clr-orange-light;
-$color-background-sidebar: $clr-gray-lighter;
-$color-gradation-light:$clr-whitesmoke-lighter;
-$color-gradation-dark: $clr-whitesmoke-light;
+$color-background-sidebar: $clr-gray-light;
+$color-background-card: $clr-brown-dark;
+$color-background-article-block: $clr-whitesmoke;
+$color-background-pagination:$clr-brown-darker;
+$color-gradation-light:$clr-whitesmoke-dark;
+$color-gradation-dark: $clr-whitesmoke-darker;
 $color-border: $clr-gray;
-$color-border-sub: $clr-gray-light;
+$color-border-sub: $clr-gray-dark;
 $color-mask: $clr-black;
 
 /* z-index */
